@@ -1,0 +1,15 @@
+package io.example.authorization.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping(value = "/api")
+public class TestController {
+
+    @GetMapping(value = "/test")
+    public String test(){
+        return "권한이 필요한 API 응답";
+    }
+}
